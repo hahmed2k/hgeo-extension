@@ -1,6 +1,6 @@
 -- ==========================================================
 -- HGeo PostgreSQL Extension
---
+-- ==========================================================
 -- Haroon Ahmed
 -- DATA 220P
 -- Project: "Hierarchical Geography Data Type for PostgreSQL"
