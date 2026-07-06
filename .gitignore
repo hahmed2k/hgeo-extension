@@ -7,7 +7,7 @@
 # Logs
 *.log
 
-# Node modules (if ever used)
+# Node modules
 node_modules/
 
 # Python
