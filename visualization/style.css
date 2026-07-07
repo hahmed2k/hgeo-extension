@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin: 0;
+    padding: 16px;
+    background: #2c3e50;
+    color: white;
+}
+
+#container {
+    display: flex;
+    height: calc(100vh - 70px);
+}
+
+#sidebar {
+    width: 300px;
+    padding: 16px;
+    background: #f4f4f4;
+    overflow-y: auto;
+}
+
+#map {
+    flex: 1;
+}
+
+#hierarchy li {
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+.country {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.state {
+    color: #2980b9;
+}
+
+.county {
+    color: #27ae60;
+}
+
+.city {
+    color: #c0392b;
+}
