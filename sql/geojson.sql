@@ -1,6 +1,6 @@
 -- ==========================================================
 -- HGeo GeoJSON Support
--- Phase 3
+-- Phase 3 ****UPDATED FOR VISUALIZATION PHASE (Phase 6)****
 -- ==========================================================
 
 CREATE OR REPLACE FUNCTION hgeo_is_valid_geojson(geojson JSONB)
@@ -76,7 +76,10 @@ END;
 $$;
 
 
-CREATE OR REPLACE FUNCTION hgeo_to_geojson(obj hgeo)
+CREATE OR REPLACE FUNCTION hgeo_to_geojson_with_parent(
+    obj hgeo,
+    parent_name TEXT DEFAULT NULL
+)
 RETURNS JSONB
 LANGUAGE plpgsql
 AS $$
@@ -93,6 +96,7 @@ BEGIN
             'id', obj->'id',
             'name', obj->'name',
             'level', obj->'level',
+            'parent', parent_name,
             'metadata', obj->'metadata',
             'centroid', obj->'centroid',
             'raster', obj->'raster',
@@ -106,7 +110,11 @@ BEGIN
         SELECT value
         FROM jsonb_array_elements(obj->'children')
     LOOP
-        child_collection := hgeo_to_geojson(child::hgeo);
+        child_collection := hgeo_to_geojson_with_parent(
+            child::hgeo,
+            obj->>'name'
+        );
+
         features := features || (child_collection->'features');
     END LOOP;
 
@@ -116,3 +124,23 @@ BEGIN
     );
 END;
 $$;
+
+
+CREATE OR REPLACE FUNCTION hgeo_to_geojson(obj hgeo)
+RETURNS JSONB
+LANGUAGE sql
+AS $$
+    SELECT hgeo_to_geojson_with_parent(obj, NULL);
+$$;
+
+
+
+
+
+
+
+
+
+
+
+

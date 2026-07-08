@@ -1,6 +1,6 @@
 // ==========================================================
 // HGeo Leaflet Visualization Demo
-// Loads exported GeoJSON and renders hierarchy-aware map
+// Loads exported GeoJSON and renders hierarchy-aware map ****UPDATED DURING PHASE 6****
 // ==========================================================
 
 // Initialize map near California
@@ -135,7 +135,7 @@ function highlightHierarchy(name) {
     }
 }
 
-// Dynamically build hierarchy sidebar from GeoJSON parent links
+// Dynamically build full hierarchy sidebar from GeoJSON parent links
 function buildHierarchy(data) {
     const hierarchy = document.getElementById("hierarchy");
     const childrenByParent = {};
@@ -153,6 +153,11 @@ function buildHierarchy(data) {
 
     function buildList(parentName) {
         const children = childrenByParent[parentName] || [];
+
+        if (children.length === 0) {
+            return "";
+        }
+
         let html = "<ul>";
 
         children.forEach(child => {
@@ -171,3 +176,7 @@ function buildHierarchy(data) {
 
     hierarchy.innerHTML = buildList("root");
 }
+
+
+
+
