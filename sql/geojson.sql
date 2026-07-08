@@ -1,6 +1,6 @@
 -- ==========================================================
 -- HGeo GeoJSON Support
--- Phase 3 ****UPDATED FOR VISUALIZATION PHASE (Phase 6)****
+-- Phase 3 ****UPDATED FOR VISUALIZATION PHASE DURING PHASE 6****
 -- ==========================================================
 
 CREATE OR REPLACE FUNCTION hgeo_is_valid_geojson(geojson JSONB)
