@@ -1,0 +1,6 @@
+# HGeo PostgreSQL Extension control file
+
+comment = 'Hierarchical Geography data type with PostGIS integration'
+default_version = '1.0'
+requires = 'postgis'
+relocatable = true
