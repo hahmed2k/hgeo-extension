@@ -3,7 +3,7 @@
 -- ==========================================================
 -- Haroon Ahmed
 -- DATA 220P
--- Project: "Hierarchical Geography Data Type for PostgreSQL"
+-- Project: Hierarchical Geography Data Type for PostgreSQL
 -- Purpose: Suite for Phsae 3 Regression Testing
 -- ==========================================================
 
