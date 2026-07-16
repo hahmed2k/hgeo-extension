@@ -14,15 +14,13 @@ This project was created for Professor Mehrotra and serves as the final project 
 
 Many geographic datasets are naturally hierarchical.
 
-e.g.
-
-United States
---- California
------- Orange County
---------- Irvine
---------- Newport Beach
------- Los Angeles County
---- Texas
+- United States
+- ---> California
+- ------> Orange County
+- ---------> Irvine
+- ---------> Newport Beach
+- ------> Los Angeles County
+- ---> Texas
 
 While PostGIS provides excellent support for geometry, it doesn't provide a native hierarchical geographic object.
 
@@ -33,6 +31,21 @@ That's where the extension comes in. HGeo fills this gap by providing:
 - GeoJSON support
 - PostGIS integration
 - interactive visualization
+
+---
+
+## Project Phases
+
+- Preliminary Phase: Understanding project instructions/concepts/scope to plan roadmap
+- Phase 1: Setting up the environment 
+- Phase 2: Implementing the core data type HGeo object 
+- Phase 3: GeoJSON Support
+- Phase 4: PostGIS integration 
+- Phase 5: Visualization function implementation 
+- Phase 6: Sample Data/Demo Datasets
+- Phase 7: Testing functions
+- Phase 8: Documentation
+- Phase 9: Final checks
 
 ---
 
@@ -74,7 +87,7 @@ hgeo-extension/
 │   ├── architecture.md
 │   ├── demo.md
 │   ├── examples.sql
-│   ├── hgeo_architecture.md
+│   ├── hgeo_architecture.png
 │   └── installation.md
 │
 ├── sql/
@@ -222,22 +235,23 @@ The project includes an interactive Leaflet visualization which displays:
 
 ---
 
-## Future Improvements
+## Deliverables Summary
 
-Possible future extensions include:
-
-- Raster visualization
-- Automatic PostgreSQL-to-Leaflet API
-- Additional spatial operators
-- Performance optimizations using C extensions
+| Deliverable(s) | File(s) |
+|--------------|----------|
+| PostgreSQL Extension | `hgeo.control`, `hgeo--1.0.sql` |
+| Source Code | `sql/`, `visualization/` |
+| SQL Scripts | `sql/`, `tests/test_all.sql`, `docs/examples.sql` |
+| Documentation | `README.md`, `docs/` |
+| Demo | `docs/demo.md`, `visualization/` |
+| Example Datasets | `sql/sample_data.sql` |
+| Installation Instructions | `docs/installation.md` |
 
 ---
 
 ## Author
 
 Haroon Ahmed
-
-Professor Sharad Mehrotra
 
 University of California, Irvine
 
