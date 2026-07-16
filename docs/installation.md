@@ -236,9 +236,10 @@ sql/
 tests/
 visualization/
 
-README.md
-examples.sql
 .gitignore
+hgeo--1.0.sql
+hgeo.control
+README.md
 ```
 
 ---
