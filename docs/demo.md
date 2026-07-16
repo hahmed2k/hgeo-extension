@@ -1,6 +1,6 @@
 # HGeo Extension Demo Guide
 
-This guide demonstrates will demonstrate the primary capabilities of the HGeo extension. It is  assumed the project has already been installed by following the instructions in `docs/installation.md`.
+This guide will help demonstrate the primary capabilities of the HGeo extension. It is  assumed the project has already been installed by following the instructions in `docs/installation.md`.
 
 ---
 
