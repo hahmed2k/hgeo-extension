@@ -134,6 +134,8 @@ GeoJSON Export
 Leaflet Visualization
 ```
 
+See `docs/architecture.md` for detailed diagram and breakdown.
+
 ---
 
 ## Example Workflow
