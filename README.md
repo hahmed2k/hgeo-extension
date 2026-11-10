@@ -6,8 +6,6 @@ The Hierarchical Geography (HGeo) Extension is a PostgreSQL extension that intro
 
 Unlike traditional geographic objects, the HGeo extension stores entire geographic hierarchies (countries, states, counties, cities) within a single recursive object.
 
-This project was created for Professor Mehrotra and serves as the final project for **DATA 220P**.
-
 ---
 
 ## Motivation
